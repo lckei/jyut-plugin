@@ -6,12 +6,9 @@
 
     "browser_action": {
         "default_title": "划词粤音",
-        "default_icon": "image/128logo.png"
+        "default_icon": "image/42logo.png"
     },
-    "permissions": [
-        "tabs",
-        "<all_urls>"
-    ],
+
     "icons": {
         "16": "image/16logo.png",
         "32": "image/32logo.png",
@@ -19,11 +16,11 @@
         "48": "image/48logo.png",
         "128": "image/128logo.png"
     },
-    "web_accessible_resources": ["image/32logo.png"],
+    "web_accessible_resources": ["btn.png"],
     "content_scripts": [{
         "matches": ["<all_urls>"],
         "js": ["js/jydict.js", "js/content.js"],
-        "css": ["css/ax.css", "css/ax-iconfont.css"],
+        "css": ["css/ax.css"],
         "all_frames": true
     }]
 }

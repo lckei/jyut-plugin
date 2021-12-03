@@ -6,9 +6,9 @@ oDiv.id = 'div1';
 oDiv.style.position = 'absolute';
 oDiv.style.display = 'none';
 image.className = '_btn_';
-image.src = chrome.extension.getURL("image/32logo.png");
-image.style.height = '32px';
-image.style.width = '32px';
+image.src = chrome.extension.getURL("btn.png");
+image.style.height = '28px';
+image.style.width = '28px';
 var pos = { left: 0, top: 0 };
 //鼠标拖动div
 var mousePosition;
@@ -16,18 +16,11 @@ var offset = [0, 0];
 var wheader;
 var isDown = false;
 
-function selectText() {
-    if (document.selection) {
-        return document.selection.createRange().text;
-    } else {
-        return window.getSelection().toString();
-    }
-};
 var win = document.createElement('div');
-win.innerHTML = `<div  class="ax-panel ax-border ax-radius" style="width:360px;min-height:150px">
+win.innerHTML = `<div class="ax-panel ax-border ax-radius" style="width:360px;min-height:150px">
         <div id="wheader" class="ax-panel-header ax-row">
-            <div class="ax-col"><span><i class="ax-iconfont ax-icon-radio"></i></span></div>
-            <span id="wclosebtn" class="ax-operate ax-panel-close"><i class="ax-iconfont ax-icon-close"></i></span>
+            <div class="ax-col"><span><i>o</i></span></div>
+            <span id="wclosebtn" class="ax-operate ax-panel-close"><i >x</i></span>
         </div>
         <div class="ax-break-line"></div>
         <div class="ax-panel-body ax-article"><textarea  id="dtext"></textarea>
@@ -48,6 +41,15 @@ function indexOf2dArray(array2d, itemtofind) {
     row = parseInt(index / numColumns);
     col = index % numColumns;
     return [row, col];
+};
+
+//获得鼠标划字
+function selectText() {
+    if (document.selection) {
+        return document.selection.createRange().text;
+    } else {
+        return window.getSelection().toString();
+    }
 };
 
 function showTopWindows(text, pos) {
@@ -97,8 +99,8 @@ document.addEventListener("mousemove", function(event) {
 document.addEventListener("mouseup", function(ev) {
     isDown = false;
     var ev = ev || window.event;
-    pos.left = ev.pageX + 10;
-    pos.top = ev.pageY - 10;
+    pos.left = ev.pageX + 15;
+    pos.top = ev.pageY - 5;
     if (selectText().length >= 1) {
         //console.log(oDiv.style.left, oDiv.style.top, "offsetX: " + ev.offsetX, "offsetY: " + ev.offsetY, "pageX: " + ev.pageX, "pageY: " + ev.pageY, "clientX: " + ev.clientX, "clientY: " + ev.clientY);
 
