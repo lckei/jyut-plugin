@@ -16,11 +16,11 @@
         "48": "image/48logo.png",
         "128": "image/128logo.png"
     },
-    "web_accessible_resources": ["btn.png"],
+    "web_accessible_resources": ["btn.png", "css/custom.css"],
     "content_scripts": [{
         "matches": ["<all_urls>"],
         "js": ["js/jydict.js", "js/content.js"],
-        "css": ["css/ax.css"],
-        "all_frames": true
+        "all_frames": true,
+        "run_at": "document_end"
     }]
 }

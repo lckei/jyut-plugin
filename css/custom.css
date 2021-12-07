@@ -1,0 +1,127 @@
+.custom-panel {
+    width: 320px;
+    border: 1px solid #BEB9BF;
+    color: #003333;
+    margin: 0;
+    padding: 0;
+    background-color: #EEE;
+}
+
+.custom-radius {
+    border-radius: 3px;
+}
+
+.custom-row {
+    box-sizing: border-box;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+    width: 100%;
+    zoom: 1;
+}
+
+.custom-col {
+    display: block;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    box-flex: 1;
+    min-width: 0;
+    position: relative;
+}
+
+.custom-padding {
+    padding: 7px 0px 7px 0px;
+}
+
+.custom-padding .custom-icon {
+    font: 14px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.custom-icon {
+    background: #F0F0F0);
+}
+
+.custom-icon:hover {
+    background: #ccc;
+}
+
+.panels-heading {
+    height: 30px;
+    line-height: 30px;
+    padding: 5px;
+    background: #DDD;
+}
+
+.panel-body {
+    padding: 5px;
+}
+
+.break-line {
+    height: 1px;
+    overflow: hidden;
+    border: 1px solid #BEB9BF;
+}
+
+span {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+textarea,
+i {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    font-family: "微软雅黑", "microsoft yahei", "Arial", "Helvetica Neue", "sans-serif", "宋体", "simsun";
+    outline: none;
+    resize: none;
+    -webkit-appearance: none;
+    transition: all 0.1s linear;
+    vertical-align: top;
+}
+
+textarea {
+    width: 100%;
+    height: calc(22px*5 + 18px);
+    line-height: 22px;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border-radius: 3px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+textarea:focus {
+    color: #198cff;
+    box-shadow: 0 0 0 3px rgba(25, 140, 255, 0.2);
+    border-color: rgba(25, 140, 255, 0.5) !important;
+}
+
+textarea::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+textarea::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+textarea:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+textarea::-o-placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+textarea::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
