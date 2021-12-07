@@ -125,3 +125,9 @@ textarea::-o-placeholder {
 textarea::placeholder {
     color: rgba(0, 0, 0, 0.3);
 }
+
+#selectext,
+#divPanel {
+    position: fixed !important;
+    z-index: 99999 !important
+}

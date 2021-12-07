@@ -126,7 +126,7 @@ document.addEventListener("mousemove", function(event) {
 document.addEventListener("mouseup", (ev) => {
         isDown = false;
         var ev = ev || window.event;
-        pos.left = ev.pageX + 15;
+        pos.left = ev.pageX + 20;
         pos.top = ev.pageY - 5;
         if (selectText().length >= 1) {
             setTimeout(() => {
@@ -143,6 +143,7 @@ document.onclick = function(ev) {
     var ev = ev || window.event
     ev.cancelBubble = true;
     divRootAppSelectext.style.display = 'none';
+    isDown = false;
 }
 
 //点击btn 显示plane
@@ -168,4 +169,5 @@ panelHeader.addEventListener('mousedown', function(ev) {
         divPanel.offsetLeft - ev.clientX,
         divPanel.offsetTop - ev.clientY
     ];
+    divRootAppSelectext.style.display = "none";
 }, true);
